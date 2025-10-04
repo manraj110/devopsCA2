@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: my-website
-          image: manraj110/my-static-website:ce48c59848de8df2ac877cb2a9351dbd6da18d99
+          image: manraj110/my-static-website:104e151
           ports:
             - containerPort: 80
