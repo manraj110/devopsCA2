@@ -22,6 +22,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/my-static-website:latest
-            manraj110/my-static-website:${{ github.sha_short }}
+          tags: manraj110/my-static-website:test
