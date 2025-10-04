@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-website-service
+spec:
+  type: NodePort # This makes the service accessible from outside the cluster
+  selector:
+    app: my-website # This connects the service to your deployment's pods
+  ports:
+    - port: 80
+      targetPort: 80

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-website-deployment
+spec:
+  replicas: 3 # Tells Kubernetes to run 3 copies of your application
+  selector:
+    matchLabels:
+      app: my-website
+  template:
+    metadata:
+      labels:
+        app: my-website
+    spec:
+      containers:
+        - name: my-website
+          image: manraj110/my-static-website:ce48c59848de8df2ac877cb2a9351dbd6da18d99
+          ports:
+            - containerPort: 80
